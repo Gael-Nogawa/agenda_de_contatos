@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px dashed hotpink;
+    
+}
+
+body {
+    margin: 0 auto;
+    padding-top: 100px;
+    background-color: rgb(108, 108, 104);
+   
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    height: 60px;
+
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+#form-contatos {
+    display: flex;
+    justify-content: center;
+}
+
+
+input {
+    height: 35px;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+
+}
+
+table th {
+    padding: 16px;
+}
+
+table td {
+    padding: 16px;
+    justify-content: center;
+}
+
+tfoot td {
+    font-size: 12px;
+    text-align: center;
+}

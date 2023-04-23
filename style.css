@@ -35,7 +35,7 @@ header img {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
 
@@ -48,24 +48,29 @@ header img {
 }
 
 
-input, select, button {
-    
+form input, select, button {
+    font-size: 14px;
     height: 35px;
     padding: 10px;
     margin-top: 20px;
     width: 23%;
     border-radius: 8px;
-    outline: none;
-  
+    border: none;
+}
+input:focus{
+    color:  rgb(0, 149, 255);
+    
 }
 
 
 table {
     width: 100%;
-    background-color: #fff;
+    background-color: rgb(23, 22, 23);
+    color: #fff;
     border: 1px solid #ddd;
     margin-top: 20px;
     border-radius: 8px;
+
 
 }
 
@@ -76,16 +81,13 @@ thead th {
 
 select {
     background-color: #fff;
-    width: 18%;
+    width: 15%;
 }
-button {
+form button {
     background-color: #fff;
     border: none;
     font-size: 16px;
     color:rgb(0, 149, 255)
-}
-input:focus {
-    border-color: rgb(0, 149, 255)
 }
 button:hover {
     cursor: pointer; border-radius: 8px;
@@ -94,6 +96,7 @@ button:hover {
 
 tbody tr:hover {
     background-color: rgb(187, 239, 246);
+    color:black;
    
 }
 
@@ -108,4 +111,7 @@ tfoot td {
     font-size: 18px;
     text-align: center;
     padding: 16px;
+}
+#resultado {
+    background-color: grey;
 }

@@ -16,44 +16,45 @@ const telefones= [];
 let linhas = '';
 let peDaLinhas = '';
 
+
+
 form.addEventListener('submit', function(e){
     e.preventDefault();
     
     adicionaLinhaTBody();
     atualizaTabela();
-    somaContatos();
       
 });
 
 function adicionaLinhaTBody(){
 
-    nomes.push(inputNome.value);
-    telefones.push(inputTel.value);
+    if (nomes.includes(inputNome.value)){
+        alert(`O nome ${inputNome.value} já foi cadastrado`)
 
-    let linha = `<tr>`;
-    linha += `<td> ${inputNome.value}</td>`;
-    linha += `<td> ${inputTel.value}</td>`;
-    linha += `<td colspan="3"> ${select.value}</td>`;
-    linha += `</tr>`;
-    linhas += linha;
+    } else if (telefones.includes(inputTel.value)){
+        alert(`O número de ${inputTel.value} já está cadastrado`)
+        
+    }  else {
 
-    let peDaLinha = `<tr>`;
-    peDaLinha += `<td> ${nomes.length}</td>`;
-    peDaLinha += `</tr>`;
-    peDaLinhas += peDaLinha;
+        nomes.push(inputNome.value);
+        telefones.push(inputTel.value)
+
+        let linha = `<tr>`;
+        linha += `<td> ${inputNome.value} </td>`;
+        linha += `<td> ${inputTel.value}</td>`;
+        linha += `<td> ${select.value}</td>`;
+        linhas += linha;
+
+        inputNome.value = '';
+        inputTel.value = '';
+    }
 
   
 }
 
-function somaContatos(){
-
-    
-}
 
 function atualizaTabela(){
    
-    peDaTabela.innerHTML = peDaLinhas;
     corpoTabela.innerHTML = linhas;
-
-    
+    peDaTabela.innerHTML = `Contatos salvos: ${nomes.length}`;
 }

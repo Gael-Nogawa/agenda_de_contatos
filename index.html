@@ -19,14 +19,14 @@
     <div class="container">
         <header>
             <img src="./images/cadernoELapis.png" alt="anotando no papel">
-            <h1>Agenda de Contatos</h1>
+            <h1 class="gradient">Agenda de Contatos</h1>
         </header>
         <form id="form-contatos" action="processa-dados" method="post">
             <input id="input-nome" type="text" placeholder="Digite o nome para inserir"></input>
             <input id="input-telefone" type="tel" placeholder="19 991038516" maxlength="12"></input>
             <select id="select">
-                <option value="particular">Particular</option>
-                <option value="trabalho">Trabalho</option>
+                <option value="Particular">Particular</option>
+                <option value="Trabalho">Trabalho</option>
             </select>
             <button type="submit">Adicionar</button>
 
@@ -40,16 +40,16 @@
                 </tr>
             </thead>
             <tbody><!--                 <tr>
-                    <td>Vanessa</th>
+                    <td>Vanessa</td>
                     <td>55 999806020</td>
                     <td>Vida</td>
                 </tr> -->
 
             </tbody>            
             <tfoot>
-                <tr>
-                    <td colspan="3">Contatos salvos : </td>
-                   <!--<td>(Numero de contatos) </td>Colocar quantos contatos têm -->
+                <tr  class="resultado">
+                    <td colspan="3">Contatos salvos : 0 </td>
+                   <!--<td>(Numero de contatos)-->
                     
                 </tr>
             </tfoot>

@@ -2,13 +2,8 @@ const form = document.getElementById('form-contatos');
 const inputNome = document.getElementById('input-nome');
 const inputTel = document.getElementById('input-telefone'); 
 const select = document.getElementById('select');
-const peDaTabela = document.querySelector('tfoot');
+const peDaTabela = document.querySelector('.resultado');
 const corpoTabela = document.querySelector('tbody');
-
-//colocar a soma ou nomes.length;
-//colocar o inputNome pra não ser igual
-// e colocar um else;
-//qualquer coisa, voltar para a aula = calculando as médias;
 
 const nomes = [];
 const telefones= [];
@@ -17,6 +12,20 @@ let linhas = '';
 let peDaLinhas = '';
 
 
+inputTel.addEventListener('keyup', function(e){
+    let input = e.target;
+    input.value = mascaraCelular(inputTel.value);
+})
+
+function mascaraCelular(value){
+    if (!value){
+        return " ";
+    } else {
+        value = value.replace(/\D/g, '');
+        value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+        return value;
+    }
+};
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -48,13 +57,11 @@ function adicionaLinhaTBody(){
         inputNome.value = '';
         inputTel.value = '';
     }
-
-  
-}
+};
 
 
 function atualizaTabela(){
    
     corpoTabela.innerHTML = linhas;
     peDaTabela.innerHTML = `Contatos salvos: ${nomes.length}`;
-}
+};

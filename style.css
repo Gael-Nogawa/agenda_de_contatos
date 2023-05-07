@@ -2,16 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px dashed hotpink;
+
 }
 
-/* VALENDOOOOOOOOOOOOO*/
-
-
 body {
-   
     background-image: url(./images/2500114.jpg);
-    
 }
 
 .container {
@@ -19,20 +14,25 @@ body {
     width: 100%;
     margin: 0 auto;
     padding-top: 100px;
-    
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff90;
+    background-color: #00000090;
+    border-radius: 8px;
+    padding: 15px;
 }
 
 header img{
-    height: 60px;
+    height: 40px;
 }
-
+h1{
+    color: #fff;
+    font-size: 40px;
+}
+/*
 .gradient {
     background-image: linear-gradient(to top,rgb(203, 249, 243), rgb(0, 149, 255), rgb(128, 0, 126));
     background-clip: text;
@@ -40,9 +40,8 @@ header img{
     -webkit-text-fill-color: transparent;
     font-style: italic;
     font-size: 50px;
-
 }
-
+*/
 
 
 #form-contatos {
@@ -60,6 +59,11 @@ form input, select, button {
     border: none;
 }
 
+#input-nome, #input-telefone{
+    text-transform: capitalize;
+    padding-left: 20px;
+}
+
 input:focus{
     color:  rgb(0, 149, 255);
     
@@ -67,13 +71,10 @@ input:focus{
 
 table {
     width: 100%;
-    background-color: rgb(23, 22, 23);
+    background-color: #474A51;
     color: #fff;
-    border: 1px solid #ddd;
     margin-top: 20px;
     border-radius: 8px;
-
-
 }
 
 select {
@@ -84,12 +85,13 @@ form button {
     background-color: #fff;
     border: none;
     font-size: 16px;
-    color:rgb(0, 149, 255)
+    color: #474A51;
 }
 button[type="submit"]:hover{
     cursor: pointer; 
     border-radius: 8px;
-    background-color: gold;
+    background-color: #d3d3d3;
+
 }
 
 tbody tr:hover {
@@ -109,10 +111,11 @@ thead th {
 tbody td {
     padding: 16px 0 8px 0;
     text-align: center;
+    font-size: 18px;
    
 }
 
-.resultado td{
+tfoot td{
     font-size: 18px;
     text-align: center;
     padding: 16px;

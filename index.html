@@ -22,8 +22,8 @@
             <h1 class="gradient">Agenda de Contatos</h1>
         </header>
         <form id="form-contatos" action="processa-dados" method="post">
-            <input id="input-nome" type="text" placeholder="Digite o nome para inserir"></input>
-            <input id="input-telefone" type="tel" placeholder="19 991038516" maxlength="12"></input>
+            <input id="input-nome" type="text" placeholder="nome" required></input>
+            <input id="input-telefone" type="tel" placeholder="19 991038516" maxlength="11" required></input>
             <select id="select">
                 <option value="Particular">Particular</option>
                 <option value="Trabalho">Trabalho</option>
@@ -47,8 +47,8 @@
 
             </tbody>            
             <tfoot>
-                <tr  class="resultado">
-                    <td colspan="3">Contatos salvos : 0 </td>
+                <tr>
+                    <td colspan="3" class="resultado">Contatos salvos: 0 </td>
                    <!--<td>(Numero de contatos)-->
                     
                 </tr>

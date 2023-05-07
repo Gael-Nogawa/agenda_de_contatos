@@ -65,7 +65,7 @@ form input, select, button {
 }
 
 input:focus{
-    color:  rgb(0, 149, 255);
+    color:  #474A51;
     
 }
 
@@ -91,6 +91,7 @@ button[type="submit"]:hover{
     cursor: pointer; 
     border-radius: 8px;
     background-color: #d3d3d3;
+    color: black;
 
 }
 
